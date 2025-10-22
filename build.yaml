@@ -9,7 +9,7 @@
 # shield: [ "corne_left", "corne_right" ]
 # name: zmk-keyboard-ZMK-4x3test
 include:
-  - board: rpi_pico2
+  - board: rpi_pico_w # Actually should be something like rpi_pico2_w
     shield: ZMK-4x3test
 #   - board: nice_nano_v2
 #   - board: nice_nano_v2
