@@ -66,6 +66,6 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
 
         gpio-controller;
         #gpio-cells = <2>;
-        ngpios = <3>; /* 使用三個輸出（對應三個欄） */
+        ngpios = <8>; /* 使用三個輸出（對應三個欄）but only 8, 16, 24, 32 are allowed */
     };  
 };
