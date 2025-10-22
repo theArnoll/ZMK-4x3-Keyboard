@@ -21,7 +21,7 @@
                 &kp R  &kp N2 &kp G
                 &kp T  &kp J  &kp C
                 &kp U  &kp G  &kp M
-                &kp I  &OUT_TOG &to 1
+                &kp I  &out OUT_TOG &to 1
             >;
         };
         second_layer {
@@ -32,6 +32,6 @@
                 &kp N7 &kp N8 &kp N9
                 &m_test &trans &to 0
             >;
-        }
+        };
     };
 };
