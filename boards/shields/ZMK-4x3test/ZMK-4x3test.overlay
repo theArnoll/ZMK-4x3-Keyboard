@@ -54,7 +54,7 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
 
         debounce-press-ms = <1>;
         debounce-release-ms = <1>;
-        polling-interval-msec = <1>;
+        poll-period-ms = <1>;
     };
 };
 
