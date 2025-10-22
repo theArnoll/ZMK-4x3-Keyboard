@@ -5,10 +5,10 @@
 / {
     behaviors {
         m_test: m_test {
-            compatible = "zmk,behavior-macro-string";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            label = "TEST_MACRO";
-            string = "0";
+            bindings
+                = <&macro_tap &kp t &ke e &kp s &kp t> ;
         };
     };
 
