@@ -32,13 +32,7 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
         >;
     };
 
-    /* ---------- SPI 總線與 74HC595 定義 ---------- */
-    &spi0 {
-        status = "okay";
-        /* latch 腳 (RCLK) 當成 CS */
-        cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
-
-    };
+    
 
     shifter0: gpio_ext_595@0 {
         compatible = "zmk,gpio-595";
@@ -69,4 +63,12 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
         debounce-release-ms = <1>;
         polling-interval-msec = <1>;
     };
+};
+
+/* ---------- SPI 總線與 74HC595 定義 ---------- */
+&spi0 {
+    status = "okay";
+    /* latch 腳 (RCLK) 當成 CS */
+    cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
+
 };
