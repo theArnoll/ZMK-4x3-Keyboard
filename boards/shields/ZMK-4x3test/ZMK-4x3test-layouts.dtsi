@@ -6,8 +6,8 @@
     keypad_position_map {
         compatible = "zmk,physical-layout-position-map";
         complete;
-        ZMK-4x3test_map: ZMK-4x3test {
-            physical-layout = <&ZMK-4x3test_layout>;
+        physical_map: physical {
+            physical-layout = <&physical_layout0>;
             positions // This is equivalent to `positions = <0 1 2 3>;`, reshaped for readability
                 = < 0  1  2 >
                 , < 3  4  5 >
