@@ -32,19 +32,6 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
         >;
     };
 
-    
-
-    shifter0: gpio_ext_595@0 {
-        compatible = "zmk,gpio-595";
-        reg = <0>;
-        status = "okay";
-        spi-max-frequency = <1000000>;  
-
-        gpio-controller;
-        #gpio-cells = <2>;
-        ngpios = <3>; /* 使用三個輸出（對應三個欄） */
-    };
-
     /* ---------- 鍵盤矩陣定義 ---------- */
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
@@ -71,4 +58,14 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
     /* latch 腳 (RCLK) 當成 CS */
     cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
 
+    shifter0: gpio_ext_595@0 {
+        compatible = "zmk,gpio-595";
+        reg = <0>;
+        status = "okay";
+        spi-max-frequency = <1000000>;  
+
+        gpio-controller;
+        #gpio-cells = <2>;
+        ngpios = <3>; /* 使用三個輸出（對應三個欄） */
+    };  
 };
