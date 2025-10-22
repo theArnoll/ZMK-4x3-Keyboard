@@ -1,0 +1,55 @@
+/*
+Pico GPIO2  → SER (DS)
+Pico GPIO3  → SRCLK
+Pico GPIO5  → RCLK (同時為 CS)
+OE → GND
+MR → VCC
+Q0 → Row 0
+Q1 → Row 1
+Q2 → Row 2
+Q3–Q7 → 留作未來擴充
+Column 0 – Column 3 → 直接接 Pico GPIO6–9
+*/
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    /* ---------- SPI 總線與 74HC595 定義 ---------- */
+    &spi0 {
+        status = "okay";
+        /* latch 腳 (RCLK) 當成 CS */
+        cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
+
+        shifter0: gpio_ext_595@0 {
+            compatible = "zmk,gpio-595";
+            reg = <0>;
+            status = "okay";
+            spi-max-frequency = <1000000>;
+
+            gpio-controller;
+            #gpio-cells = <2>;
+            ngpios = <3>; /* 使用三個輸出（對應三個欄） */
+        };
+    };
+
+    /* ---------- 鍵盤矩陣定義 ---------- */
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row"; // !DIODE!
+
+        col-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>,
+                    <&gpio0 7 GPIO_ACTIVE_HIGH>,
+                    <&gpio0 8 GPIO_ACTIVE_HIGH>,
+                    <&gpio0 9 GPIO_ACTIVE_HIGH>;
+
+        row-gpios = <&shifter0 0 GPIO_ACTIVE_HIGH>,
+                    <&shifter0 1 GPIO_ACTIVE_HIGH>,
+                    <&shifter0 2 GPIO_ACTIVE_HIGH>;
+
+        debounce-press-ms = <1>;
+        debounce-release-ms = <1>;
+        polling-interval-msec = <1>;
+    };
+};
