@@ -15,13 +15,7 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
 #include "ZMK-4x3test-layouts.dtsi"
 
 
-/* ---------- SPI 總線與 74HC595 定義 ---------- */
-&spi0 {
-    status = "okay";
-    cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>; 
 
-    // shifter?
-};
 
 / {
     chosen {
@@ -35,15 +29,22 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
         transform = <&default_transform>; // Label of the matrix transform this layout uses
     };
 
-    shifter0: gpio_ext_595@0 {
-        compatible = "zmk,gpio-595";
+    /* ---------- SPI 總線與 74HC595 定義 ---------- */
+    &spi0 {
         status = "okay";
-        gpio-controller;
-        spi-max-frequency = <200000>;
-        reg = <0>;
-        #gpio-cells = <2>;
-        ngpios = <8>;
-    };  
+        cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>; 
+
+        // shifter?
+        shifter0: gpio_ext_595@0 {
+            compatible = "zmk,gpio-595";
+            status = "okay";
+            gpio-controller;
+            spi-max-frequency = <200000>;
+            reg = <0>;
+            #gpio-cells = <2>;
+            ngpios = <8>;
+        };  
+    };
 
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
