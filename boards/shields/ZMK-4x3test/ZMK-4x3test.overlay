@@ -14,6 +14,23 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "ZMK-4x3test-layouts.dtsi"
 
+
+/* ---------- SPI 總線與 74HC595 定義 ---------- */
+&spi0 {
+    status = "okay";
+    cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>; 
+
+    shifter0: gpio_ext_595@0 {
+        compatible = "zmk,gpio-595";
+        status = "okay";
+        gpio-controller;
+        spi-max-frequency = <200000>;
+        reg = <0>;
+        #gpio-cells = <2>;
+        ngpios = <8>;
+    };  
+};
+
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -56,20 +73,4 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
         debounce-release-ms = <1>;
         poll-period-ms = <1>;
     };
-};
-
-/* ---------- SPI 總線與 74HC595 定義 ---------- */
-&spi0 {
-    status = "okay";
-    cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>; 
-
-    shifter0: gpio_ext_595@0 {
-        compatible = "zmk,gpio-595";
-        status = "okay";
-        gpio-controller;
-        spi-max-frequency = <200000>;
-        reg = <0>;
-        #gpio-cells = <2>;
-        ngpios = <8>;
-    };  
 };
