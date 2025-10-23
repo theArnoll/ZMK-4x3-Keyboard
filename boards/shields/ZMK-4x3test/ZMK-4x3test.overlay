@@ -20,15 +20,7 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
     status = "okay";
     cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>; 
 
-    shifter0: gpio_ext_595@0 {
-        compatible = "zmk,gpio-595";
-        status = "okay";
-        gpio-controller;
-        spi-max-frequency = <200000>;
-        reg = <0>;
-        #gpio-cells = <2>;
-        ngpios = <8>;
-    };  
+    // shifter?
 };
 
 / {
@@ -42,6 +34,16 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
         kscan = <&kscan0>; // Label of the kscan node this layout uses
         transform = <&default_transform>; // Label of the matrix transform this layout uses
     };
+
+    shifter0: gpio_ext_595@0 {
+        compatible = "zmk,gpio-595";
+        status = "okay";
+        gpio-controller;
+        spi-max-frequency = <200000>;
+        reg = <0>;
+        #gpio-cells = <2>;
+        ngpios = <8>;
+    };  
 
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
