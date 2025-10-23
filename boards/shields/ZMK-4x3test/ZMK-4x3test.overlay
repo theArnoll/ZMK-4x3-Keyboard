@@ -58,7 +58,7 @@ Column 0 – Column 3 → 直接接 Pico GPIO6–9
     /* ---------- 鍵盤矩陣定義 ---------- */
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row"; // !DIODE!
+        diode-direction = "row2col"; // !DIODE!
 
         col-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>,
                     <&gpio0 7 GPIO_ACTIVE_HIGH>,
