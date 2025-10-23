@@ -1,0 +1,19 @@
+#include <dt-bindings/pinctrl/rpi-pico-rp2040-pinctrl.h>
+&pinctrl {
+    /* configuration for spi0 device, default state */
+    spi0_default: spi0_default {
+        group1 {
+            /* configure P18 as SPI0 clock, P19 as SPI0 MOSI */
+            pinmux = <SPI0_SCK_P2>, <SPI0_TX_P3>;
+        };
+    };
+
+    /* configuration for an spi device using PIO0, default state  */
+    pio0_spi_default: pio0_spi_default {
+        group1 {
+            /* Configure P13 and P14 for PIO, to be used for MOSI and SCK */
+            pinmux = <PIO0_P3>, <PIO0_P2>;
+            /*            _P5 */
+        };
+    };
+};
