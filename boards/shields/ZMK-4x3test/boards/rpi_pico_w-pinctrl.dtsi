@@ -1,4 +1,5 @@
 #include <dt-bindings/pinctrl/rpi-pico-rp2040-pinctrl.h>
+/*
 &pinctrl {
     /* configuration for spi0 device, default state */
     spi0_default: spi0_default {
@@ -17,3 +18,4 @@
         };
     };
 };
+*/

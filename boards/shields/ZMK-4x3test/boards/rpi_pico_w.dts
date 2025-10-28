@@ -1,6 +1,7 @@
 #include "<board>-pinctrl.dtsi"
 
 // https://zmk.dev/docs/development/hardware-integration/shift-registers#shift-register-spi-device
+/*
 &spi0 {
     /* enables this PIO block */
     status = "okay";
@@ -22,6 +23,7 @@
         /* Nodes using the bus go here */
     };
 };
+*/
 
 /* ---------- SPI 總線與 74HC595 定義 ----------
 &spi0 {
@@ -37,4 +39,5 @@
         #gpio-cells = <2>;
         ngpios = <8>;
     };  
-}; */
+};
+*/
