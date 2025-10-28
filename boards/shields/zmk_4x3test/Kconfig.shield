@@ -1,0 +1,2 @@
+config ZMK_4X3TEST
+    def_bool $(shields_list_contains,zmk_4x3test)

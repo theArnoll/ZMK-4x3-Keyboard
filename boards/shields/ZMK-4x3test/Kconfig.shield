@@ -1,3 +1,0 @@
-# No whitespace after the comma or in your keyboard name!
-config SHIELD_ZMK-4X3TEST
-    def_bool $(shields_list_contains,ZMK-4x3test)

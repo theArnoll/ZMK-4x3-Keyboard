@@ -7,14 +7,14 @@
 #
 # board: [ "nice_nano_v2" ]
 # shield: [ "corne_left", "corne_right" ]
-# name: zmk-keyboard-ZMK-4x3test
 include:
-  - board: rpi_pico_w # Actually should be something like rpi_pico2_w
-    shield: ZMK-4x3test
-#   - board: nice_nano_v2
+#   - board: bdn9_rev2
+  - board: seeed_xiao_nrf52840
+    shield: zmk_4x3test
 #   - board: nice_nano_v2
 #     shield: corne_left
 #     snippet: studio-rpc-usb-uart
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
+---
