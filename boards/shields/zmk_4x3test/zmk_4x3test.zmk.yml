@@ -2,7 +2,7 @@ file_format: "1"
 id: zmk_4x3test
 name: Arnoll 4x3 keyboard
 type: shield
-url: https://github.com/foostan/crkbd/
+url: https://github.com/theArnoll/ZMK-4x3test
 requires: [seeed_xiao_nrf52840]
 features:
   - keys
