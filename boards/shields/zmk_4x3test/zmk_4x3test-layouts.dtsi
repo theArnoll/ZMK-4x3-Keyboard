@@ -5,7 +5,7 @@
         // Other chosen items
     };
 
-    default_layout: default_layout { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#multiple-physical-layouts/
+    physical_layout0: physical_layout0 { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#multiple-physical-layouts/
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         transform = <&default_transform>;
