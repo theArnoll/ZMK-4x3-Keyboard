@@ -4,17 +4,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: theArnoll #
-      url-base: https://github.com/theArnoll #
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: zmk_4x3test #
-      remote: ZMK-4x3test #
-      import: config/west.yml #
   # remotes:
   #   - name: theArnoll
   #     url-base: https://github.com/theArnoll
