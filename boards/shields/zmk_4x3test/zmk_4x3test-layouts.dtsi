@@ -4,11 +4,4 @@
         zmk,physical-layout = &physical_layout0;
         // Other chosen items
     };
-
-    physical_layout0: physical_layout0 { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#multiple-physical-layouts/
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan0>;
-    };
 };
