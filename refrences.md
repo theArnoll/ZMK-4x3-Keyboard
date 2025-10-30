@@ -8,7 +8,9 @@
 
 [&studio_unlock in keymap](https://zmk.dev/docs/keymaps/behaviors/studio-unlock)
 
-[.zmk.yml][https://zmk.dev/docs/development/hardware-integration/hardware-metadata-files]
+[.zmk.yml](https://zmk.dev/docs/development/hardware-integration/hardware-metadata-files)
+
+[physical layout](https://zmk.dev/docs/development/hardware-integration/physical-layouts)
 
 ---
 
