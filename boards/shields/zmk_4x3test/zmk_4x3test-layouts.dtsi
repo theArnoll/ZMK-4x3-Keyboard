@@ -17,10 +17,10 @@
         complete; // Optional, see 'Example non-complete position map'
         layout1: layout1 {
             physical-layout = <&physical_layout0>;
-            positions = <  0  1  2 >,
-                        <  3  4  5 >,
-                        <  6  7  8 >,
-                        <  9 10 11 >; // List of positions to map
+            positions = < 0  1  2 >,
+                        < 3  4  5 >,
+                        < 6  7  8 >,
+                        < 9 10 11 >; // List of positions to map
         };
     };
 };
