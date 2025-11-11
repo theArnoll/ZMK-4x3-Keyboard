@@ -16,10 +16,10 @@
             // |     A     |     B     |     C     |
             // |     D     |     E     |     F     |
             bindings = <
-                &kp R    &kp 2    &kp 3
-                &kp T    &kp 5    &kp G
-                &kp U    &kp 8    &kp J
-                &kp I    &kp 0    &studio_unlock
+                &kp I    &kp 2    &kp 3
+                &kp U    &kp 5    &kp J
+                &kp T    &kp 8    &kp G
+                &kp R    &kp 0    &studio_unlock
             >;
         };
     };
