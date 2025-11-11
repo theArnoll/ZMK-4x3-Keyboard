@@ -42,7 +42,20 @@ https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jp
         display-name = "Default Layout";
         transform = <&default_transform>;
         kscan = <&kscan0>;
-    }; // try to make ZMK Studio find it
+    }; 
+    
+    position_map { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#writing-a-position-map
+        compatible = "zmk,physical-layout-position-map";
+        complete; // Optional, see 'Example non-complete position map'
+        layout1: layout1 {
+            physical-layout = <&physical_layout0>;
+            positions = <  0  1  2  3 >,
+                        <  4  5  6  7 >,
+                        <  8  9 10 11 >,
+                        < 12 13 14 15 >; // List of positions to map
+        };
+    };
+    // try to make ZMK Studio find it
 
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
