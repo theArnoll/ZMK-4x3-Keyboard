@@ -14,6 +14,10 @@ In chronological order of use (basically)
 
 [physical layout](https://zmk.dev/docs/development/hardware-integration/physical-layouts)
 
+ZMK Studio:\
+[Adding ZMK Studio Support to a Keyboard](https://zmk.dev/docs/features/studio#adding-zmk-studio-support-to-a-keyboard)\
+[Physical Layout with `keys`](https://zmk.dev/docs/development/hardware-integration/physical-layouts#physical-layout-with-keys-example)
+
 ## To be use
 
 [74595](https://zmk.dev/docs/development/hardware-integration/shift-registers)\
