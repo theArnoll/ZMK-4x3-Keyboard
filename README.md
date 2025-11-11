@@ -1,12 +1,14 @@
 # A 4×3 Keyboard for ZMK firmware configuring tryout
 
+[Traditional Chinese version](./README_zhTW.md)
+
 Before start building the final Dvorak-optimized ortholinear southpole keyboard, I'm going to build a smaller prototype that has the same function as the final keyboard to seeing the feasibility and being the springboard of the final product.
 
 Built 50 times and finally have the first success building
 
-#### The development of this project is still in progress
+### The development of this project is still in progress
 
-`.uf2` is at `Action` tab, the first one, in `Artifacts` section, there're a `firmware` object. Click to download the `.zip`, and you'll have the `.uf2`.\
+`.uf2` is at `Action` tab, click the first one, in `Artifacts` section, there's a `firmware` object. Click to download the `.zip`, unzip it and you'll have the `.uf2`.\
 <!-- TODO Write burning instruction hère -->
 
 ## Functions
@@ -37,7 +39,7 @@ So it's like a minimum viability test in this stage.
 
 - 74HC595 IC
 - (Optional) LED bar graph display
-- (optional) 4 Resistors for ↑
+- (Optional) 4 Resistors for ↑
 
 ---
 

@@ -1,7 +1,7 @@
 # RPi Pico 2 W → RPi Pico W (for test building)
 
-Based on AI generated codes, instructions and file structure
-Commited **43** times and built **42** times, ***non*** of them are success
+Based on AI generated codes, instructions and file structure, and edited by myself digging official documents\
+Commited **43** times and built **42** times, ***non*** of them are succeeded
 
 > Decided to change to Seeed XIAO and try to make a minimum unit test on my own,
 > and restart from blank template with reading [New Keyboard Shield](https://zmk.dev/docs/development/hardware-integration/new-shield?keyboard-type=unibody&physical-layouts=studio&interconnect=seeed_xiao) by myself and 

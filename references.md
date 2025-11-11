@@ -14,9 +14,7 @@ In chronological order of use (basically)
 
 [physical layout](https://zmk.dev/docs/development/hardware-integration/physical-layouts)
 
----
-
-To be used
+## To be use
 
 [74595](https://zmk.dev/docs/development/hardware-integration/shift-registers)\
 [Pinout, SPI, I²C and Pin control file (For Seeed XIAO, nRF52840)](https://zmk.dev/docs/development/hardware-integration/pinctrl?interconnect=seeed_xiao&controller-type=nrf52840#boards-shields-and-modules)
