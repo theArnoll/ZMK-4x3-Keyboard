@@ -45,3 +45,23 @@ So it's like a minimum viability test in this stage.
 
 Everything here are basically all referenced to the official document. You can check out [references.md](./references.md) for more detailed information.\
 The order of references in the file should be in chronological order of use.
+
+---
+
+# History
+
+Latest first
+
+## Clarified Column and Row
+On **66th build**(2025 Nov. 11) I finally found that I misunderstand the meaning of column and row.\
+As a little note, I'm going to make a note here
+
+＼|Column 0|Column 1|Column 2
+--|--------|--------|--------
+Row 0|RC(0,0)|RC(0,1)|RC(0,2)
+Row 1|RC(1,0)|RC(1,1)|RC(1,2)
+
+## First successful build
+
+Finally built successfully built on **51th build**, and realized it on **54th build**.\
+The reason I'm not realized right when succeeded is that I was using my Samsung Galaxy Tab S7 FE + [VS code web version](https://vscode.dev), and it was laggy, so it's hard to see the progress with a very real-time experience.
