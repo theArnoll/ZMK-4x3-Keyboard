@@ -5,12 +5,12 @@
         // Other chosen items
     };
 
-    physical_layout0: physical_layout0 { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#multiple-physical-layouts/
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan0>;
-    };
+    // physical_layout0: physical_layout0 { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#multiple-physical-layouts/
+    //     compatible = "zmk,physical-layout";
+    //     display-name = "Default Layout";
+    //     transform = <&default_transform>;
+    //     kscan = <&kscan0>;
+    // };
 
     position_map { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#writing-a-position-map
         compatible = "zmk,physical-layout-position-map";
