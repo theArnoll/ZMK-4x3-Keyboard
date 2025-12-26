@@ -1,19 +1,5 @@
 #include <physical_layouts.dtsi>
 
-xiao_spi: &spi0 { // https://github.com/zmkfirmware/zmk/blob/a9e0befcb61c4f3b88b1264eab73ede9200f20d3/app/boards/shields/posix_seeed_xiao/posix_seeed_xiao.overlay#L38
-    status = "okay";
-    cs-gpios = <&xiao_d 9 GPIO_ACTIVE_LOW>;
-    shifter: 595@0 {
-        compatible = "zmk,gpio-595";
-        status = "okay";
-        gpio-controller;
-        spi-max-frequency = <200000>;
-        reg = <0>;
-        #gpio-cells = <2>;
-        ngpios = <8>;
-    };
-};
-
 / {
     // chosen {
     //     zmk,kscan = &kscan0;
@@ -21,42 +7,7 @@ xiao_spi: &spi0 { // https://github.com/zmkfirmware/zmk/blob/a9e0befcb61c4f3b88b
     //     // Other chosen items
     // };
 
-    kscan0: kscan0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
-        wakeup-source;
-        
-        col-gpios
-            = <&spi0 1 GPIO_ACTIVE_HIGH >
-            , <&spi0 2 GPIO_ACTIVE_HIGH >
-            , <&spi0 3 GPIO_ACTIVE_HIGH >
-            // = <&xiao_d 8 (GPIO_ACTIVE_HIGH) >// | GPIO_PULL_UP)>
-            // , <&xiao_d 9 (GPIO_ACTIVE_HIGH) >// | GPIO_PULL_UP)>
-            // , <&xiao_d 10 (GPIO_ACTIVE_HIGH) >// | GPIO_PULL_UP)> //todo: make it 74595
-            ;
-
-        row-gpios
-            = <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
-    };
-
-    default_transform: keymap_transform0 { 
-        compatible = "zmk,matrix-transform";
-        columns = <3>; // Length of the "col-gpios" array
-        rows = <4>; // Length of the "row-gpios" array
-        map = <
-        //   Key 1 | Key 2 | Key 3
-            RC(0,0) RC(0,1) RC(0,2)
-        //   Key 4 | Key 5 | Key 6
-            RC(1,0) RC(1,1) RC(1,2)
-        //   Key 7 | Key 8 | Key 9
-            RC(2,0) RC(2,1) RC(2,2)
-            RC(3,0) RC(3,1) RC(3,2)
-        >;
-    };
+    
 
     physical_layout0: physical_layout0 { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#multiple-physical-layouts/
         compatible = "zmk,physical-layout";
