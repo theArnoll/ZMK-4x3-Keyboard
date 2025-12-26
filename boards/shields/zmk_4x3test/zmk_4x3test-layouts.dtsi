@@ -45,7 +45,7 @@
             ;
             // https://zmk.dev/docs/development/hardware-integration/physical-layouts#physical-layout-with-keys-example
             // https://zmk.dev/docs/features/studio#adding-zmk-studio-support-to-a-keyboard
-        };
+    };
 
         // &physical_layout0 {
         //     kscan = <&kscan0>; 

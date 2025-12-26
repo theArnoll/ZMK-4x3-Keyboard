@@ -5,6 +5,7 @@ config ZMK_KEYBOARD_NAME
     default "Arnoll 4x3 keyboard"
 
 config SPI
-    default y # https://zmk.dev/docs/development/hardware-integration/shift-registers
+    default y
+# https://zmk.dev/docs/development/hardware-integration/shift-registers
 
 endif
