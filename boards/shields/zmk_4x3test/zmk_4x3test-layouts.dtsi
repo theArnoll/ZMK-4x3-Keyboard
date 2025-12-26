@@ -6,6 +6,15 @@
     //     zmk,physical-layout = &physical_layout0;
     //     // Other chosen items
     // };
+    shifter: 595@0 {
+        compatible = "zmk,gpio-595";
+        status = "okay";
+        gpio-controller;
+        spi-max-frequency = <200000>;
+        reg = <0>;
+        #gpio-cells = <2>;
+        ngpios = <8>;
+    };
 
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
