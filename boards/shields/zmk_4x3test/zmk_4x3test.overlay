@@ -33,7 +33,7 @@ https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jp
     status = "okay";
     cs-gpios = <&xiao_d 9 GPIO_ACTIVE_LOW>;
     shifter: 595@0 {
-        compatible = "zmk,gpio-595";
+        compatible = "nxp,74hc595";
         status = "okay";
         gpio-controller;
         spi-max-frequency = <200000>;

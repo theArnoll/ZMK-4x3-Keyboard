@@ -8,4 +8,7 @@ config SPI
     default y
 # https://zmk.dev/docs/development/hardware-integration/shift-registers
 
+config GPIO_HC595
+    default y
+
 endif
