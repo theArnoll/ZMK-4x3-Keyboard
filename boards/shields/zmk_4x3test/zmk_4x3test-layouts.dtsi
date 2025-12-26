@@ -1,9 +1,9 @@
 / {
-    chosen {
-        zmk,kscan = &kscan0;
-        zmk,physical-layout = &physical_layout0;
-        // Other chosen items
-    };
+    // chosen {
+    //     zmk,kscan = &kscan0;
+    //     zmk,physical-layout = &physical_layout0;
+    //     // Other chosen items
+    // };
 
     physical_layout0: physical_layout0 { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#multiple-physical-layouts/
         compatible = "zmk,physical-layout";
@@ -27,6 +27,11 @@
             // https://zmk.dev/docs/development/hardware-integration/physical-layouts#physical-layout-with-keys-example
             // https://zmk.dev/docs/features/studio#adding-zmk-studio-support-to-a-keyboard
         };
+
+        // &physical_layout0 {
+        //     kscan = <&kscan0>; 
+        //     transform = <&default_transform>;
+        // };
 
     position_map { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#writing-a-position-map
         compatible = "zmk,physical-layout-position-map";
