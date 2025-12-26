@@ -14,14 +14,14 @@ In chronological order of use (basically)
 
 [physical layout](https://zmk.dev/docs/development/hardware-integration/physical-layouts)
 
-ZMK Studio:\
-[Adding ZMK Studio Support to a Keyboard](https://zmk.dev/docs/features/studio#adding-zmk-studio-support-to-a-keyboard)\
+ZMK Studio:  
+[Adding ZMK Studio Support to a Keyboard](https://zmk.dev/docs/features/studio#adding-zmk-studio-support-to-a-keyboard)  
 [Physical Layout with `keys`](https://zmk.dev/docs/development/hardware-integration/physical-layouts#physical-layout-with-keys-example)
 
-## To be use
+[74595](https://zmk.dev/docs/development/hardware-integration/shift-registers)  
+[Pinout, SPI, I²C and Pin control file (For Seeed XIAO, nRF52840)](https://zmk.dev/docs/development/hardware-integration/pinctrl?interconnect=seeed_xiao&controller-type=nrf52840#boards-shields-and-modules) (Basically read it for the pinout of XIAO in the 74595 developing stage)
 
-[74595](https://zmk.dev/docs/development/hardware-integration/shift-registers)\
-[Pinout, SPI, I²C and Pin control file (For Seeed XIAO, nRF52840)](https://zmk.dev/docs/development/hardware-integration/pinctrl?interconnect=seeed_xiao&controller-type=nrf52840#boards-shields-and-modules)
+## To be use
 
 [USB/Bluetooth toggle keycode](https://zmk.dev/docs/keymaps/behaviors/outputs)
 
@@ -30,3 +30,9 @@ ZMK Studio:\
 [Debouncing](https://zmk.dev/docs/features/debouncing)
 
 [(Maybe) Supported Handware](https://zmk.dev/docs/hardware#seeed_xiao)
+
+## I remember I read it, but I forgot when
+
+[Basic Physical Layout / Writing a position map](https://zmk.dev/docs/development/hardware-integration/physical-layouts#writing-a-position-map)  
+[`.dtsi` >](./boards/shields/zmk_4x3test/zmk_4x3test-layouts.dtsi) `/` > `position_map { layout1: layout1 { positions = <...>, <...>, ...; }; };`  
+Point: `positions = <...>, <...>, ...;`

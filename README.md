@@ -11,19 +11,19 @@ Built 50 times and finally have the first success building
 `.uf2` is at `Action` tab, click the first one, in `Artifacts` section, there's a `firmware` object. Click to download the `.zip`, unzip it and you'll have the `.uf2`.\
 <!-- TODO Write burning instruction hère -->
 
+<!-- 
+Turn Seeed XIAO into bootloader mode by double clicking the "RST" button on the board
+**after** the board is connected to PC
+ -->
+
 ## Functions
 
-- 3x3 matrix activated now
+- 4x3 matrix activated
 - USB Wired connect
 - Simple typing
-
-So it's like a minimum viability test in this stage.
+- ZMK Studio support
 
 ### Functions to be add
-
-- Full 3x4 matrix activate
-- ZMK Studio support\
-   (The support should've been included in current configuration, but [&studio_unlock](&studio_unlock) haven't officially included to keymap yet, so not tested)
 - Bluetooth connection (Using USB Power)
 
 ## Hardware requirement
@@ -52,8 +52,12 @@ The order of references in the file should be in chronological order of use.
 
 Latest first
 
+## ZMK Studio function added successfully
+On **85th build**(2025 Dec. 26) I finally added ZMK Studio successfully  
+Okay, so every problem is from the `chosen` node in the [.dtsi](./boards/shields/zmk_4x3test/zmk_4x3test-layouts.dtsi) file. It's really "the chosen node"
+
 ## Clarified Column and Row
-On **66th build**(2025 Nov. 11) I finally found that I misunderstand the meaning of column and row.\
+On **66th build**(2025 Nov. 11) I finally found that I misunderstand the meaning of column and row.  
 As a little note, I'm going to make a note here
 
 ＼|Column 0|Column 1|Column 2
@@ -63,5 +67,5 @@ Row 1|RC(1,0)|RC(1,1)|RC(1,2)
 
 ## First successful build
 
-Finally built successfully built on **51th build**, and realized it on **54th build**.\
+Finally built successfully built on **51th build**, and realized it on **54th build**.  
 The reason I'm not realized right when succeeded is that I was using my Samsung Galaxy Tab S7 FE + [VS code web version](https://vscode.dev), and it was laggy, so it's hard to see the progress with a very real-time experience.
