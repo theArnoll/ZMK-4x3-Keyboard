@@ -34,11 +34,8 @@
         columns = <3>; // Length of the "col-gpios" array
         rows = <4>; // Length of the "row-gpios" array
         map = <
-        //   Key 1 | Key 2 | Key 3
             RC(0,0) RC(0,1) RC(0,2)
-        //   Key 4 | Key 5 | Key 6
             RC(1,0) RC(1,1) RC(1,2)
-        //   Key 7 | Key 8 | Key 9
             RC(2,0) RC(2,1) RC(2,2)
             RC(3,0) RC(3,1) RC(3,2)
         >;
@@ -66,11 +63,6 @@
             // https://zmk.dev/docs/development/hardware-integration/physical-layouts#physical-layout-with-keys-example
             // https://zmk.dev/docs/features/studio#adding-zmk-studio-support-to-a-keyboard
         };
-
-        // &physical_layout0 {
-        //     kscan = <&kscan0>; 
-        //     transform = <&default_transform>;
-        // };
 
     position_map { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#writing-a-position-map
         compatible = "zmk,physical-layout-position-map";
