@@ -53,6 +53,10 @@ The order of references in the file should be in chronological order of use.
 Latest first
 
 ## ZMK Studio function added successfully
+On **117th build**(2026 Jan. 5→6 Midnight) FUNCTION COMPLETED  
+Turns out the real problem is I shouldn't make MISO (D9) a `CS` (AKA `latch`) pin while using SPI.  
+**REMEMBER EVERYONE!** or you'll waste a whole lot of time.
+
 On **107th build**(2026 Jan. 5) I finally make 74595-added version passed building.  
 Need to be configure more to make it able to function normally, but it passed and basically runnable.  
 Everything's finally going to reach a stage of an end…
