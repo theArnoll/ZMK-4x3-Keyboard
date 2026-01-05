@@ -40,7 +40,7 @@ https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jp
         compatible = "zmk,gpio-595";
         status = "okay";
         gpio-controller;
-        spi-max-frequency = <100000>; // default 200000
+        spi-max-frequency = <1000>; // default 200000
         reg = <0>;
         #gpio-cells = <2>;
         ngpios = <8>;
