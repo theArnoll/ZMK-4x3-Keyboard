@@ -1,2 +1,4 @@
 config ZMK_4X3TEST
     def_bool $(shields_list_contains,zmk_4x3test)
+    select SPI
+    # https://github.com/petejohanson/revxlp-config/blob/main/config/boards/shields/revxlp/Kconfig.shield

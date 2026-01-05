@@ -4,8 +4,9 @@ if SHIELD_ZMK_4X3TEST
 config ZMK_KEYBOARD_NAME
     default "Arnoll 4x3 keyboard"
 
-config SPI
-    default y
+# config SPI
+#     default y
 # https://zmk.dev/docs/development/hardware-integration/shift-registers
+# https://github.com/petejohanson/revxlp-config/blob/main/config/boards/shields/revxlp/Kconfig.defconfig
 
 endif
