@@ -50,7 +50,7 @@
             >;
         };
 
-        keypad_layer { // Layer 3
+        user_define_layer { // Layer 3
             // -------------------------------------
             // |     Z     |     M     |     K     |
             // |     A     |     B     |     C     |

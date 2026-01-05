@@ -6,15 +6,15 @@ Before start building the final Dvorak-optimized ortholinear southpole keyboard,
 
 Built 50 times and finally have the first success building
 
-### The development of this project is still in progress
+## The bluetooth wireless function is still under development
 
-`.uf2` is at `Action` tab, click the first one, in `Artifacts` section, there's a `firmware` object. Click to download the `.zip`, unzip it and you'll have the `.uf2`.\
-<!-- TODO Write burning instruction hère -->
+## How to burn the firmware into your Seeed XIAO
 
-<!-- 
-Turn Seeed XIAO into bootloader mode by double clicking the "RST" button on the board
-**after** the board is connected to PC
- -->
+First, you need the `.uf2` file of this project. The `.uf2` file is in `Action` tab. Go to the tab and click the first one in the list. In `Artifacts` section, there's a `firmware` object. Click the download icon on the right to download the `.zip`, unzip it and you'll have the `.uf2`.
+
+After that, turn Seeed XIAO into bootloader mode by double tapping the `RST` button on the board **after** the board is connected to PC. Your Seeed XIAO will appear in File Explorer like an USB called `XIAO-SENSE`. If it doesn't come with that name, at least you'll able to recognize the device.
+
+Drag the `.uf2` file into the "USB". After the file transfer is done, Seeed XIAO will automatically eject itself and reboot into the code. If it functions correct, you're done burn the firmware into your Seeed XIAO.
 
 ## Functions
 
@@ -24,7 +24,7 @@ Turn Seeed XIAO into bootloader mode by double clicking the "RST" button on the 
 - ZMK Studio support
 
 ### Functions to be add
-- Bluetooth connection (Using USB Power)
+- Bluetooth connection (With BL-5C battery)
 
 ## Hardware requirement
 
@@ -34,10 +34,12 @@ Turn Seeed XIAO into bootloader mode by double clicking the "RST" button on the 
 - 16 mechanical keyboard switches
 - My 4×3 matrix DIP PCB\
   You can buy it from a shopping platform in Taiwan called Shopee in the future, and the PCB manufacturing file will upload in the future.
+- 74HC595 IC
 
 ### Things you will need in future updates
 
-- 74HC595 IC
+- A BL-5C battery
+- Disassemble-able battery connecting wire
 - (Optional) LED bar graph display
 - (Optional) 4 Resistors for ↑
 
@@ -52,14 +54,17 @@ The order of references in the file should be in chronological order of use.
 
 Latest first
 
-## ZMK Studio function added successfully
-On **117th build**(2026 Jan. 5→6 Midnight) FUNCTION COMPLETED  
+## FUNCTION COMPLETED
+
+On **117th build**(2026 Jan. 5→6 Midnight) WIRED FUNCTION COMPLETED!  
 Turns out the real problem is I shouldn't make MISO (D9) a `CS` (AKA `latch`) pin while using SPI.  
 **REMEMBER EVERYONE!** or you'll waste a whole lot of time.
 
 On **107th build**(2026 Jan. 5) I finally make 74595-added version passed building.  
 Need to be configure more to make it able to function normally, but it passed and basically runnable.  
 Everything's finally going to reach a stage of an end…
+
+## ZMK Studio function added successfully
 
 On **85th build**(2025 Dec. 26) I finally added ZMK Studio successfully  
 Okay, so every problem is from the `chosen` node in the [.dtsi](./boards/shields/zmk_4x3test/zmk_4x3test-layouts.dtsi) file. It's really "the chosen node"
