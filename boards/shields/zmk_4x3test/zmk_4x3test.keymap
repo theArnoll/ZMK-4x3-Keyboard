@@ -70,6 +70,6 @@
                 &kp N0 &kp N5 &kp N9
                 &to 0  &to 1  &studio_unlock
             >;
-        }
+        };
     };
 };
