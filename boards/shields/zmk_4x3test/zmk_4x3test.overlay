@@ -71,12 +71,9 @@ https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jp
         wakeup-source;
         
         col-gpios
-            = <&shifter 0 GPIO_ACTIVE_HIGH>
-            , <&shifter 1 GPIO_ACTIVE_HIGH>
-            , <&shifter 2 GPIO_ACTIVE_HIGH>
-            // = <&xiao_d 8 (GPIO_ACTIVE_HIGH) >// | GPIO_PULL_UP)>
-            // , <&xiao_d 9 (GPIO_ACTIVE_HIGH) >// | GPIO_PULL_UP)>
-            // , <&xiao_d 10 (GPIO_ACTIVE_HIGH) >// | GPIO_PULL_UP)> //todo: make it 74595
+            = <&shifter 0 GPIO_ACTIVE_LOW>
+            , <&shifter 1 GPIO_ACTIVE_LOW>
+            , <&shifter 2 GPIO_ACTIVE_LOW>
             ;
 
         row-gpios
