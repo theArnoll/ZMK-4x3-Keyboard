@@ -53,6 +53,10 @@ The order of references in the file should be in chronological order of use.
 Latest first
 
 ## ZMK Studio function added successfully
+On **107th build**(2026 Jan. 5) I finally make 74595-added version passed building.  
+Need to be configure more to make it able to function normally, but it passed and basically runnable.  
+Everything's finally going to reach a stage of an end…
+
 On **85th build**(2025 Dec. 26) I finally added ZMK Studio successfully  
 Okay, so every problem is from the `chosen` node in the [.dtsi](./boards/shields/zmk_4x3test/zmk_4x3test-layouts.dtsi) file. It's really "the chosen node"
 

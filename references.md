@@ -21,7 +21,7 @@ ZMK Studio:
 74595:
 [74595](https://zmk.dev/docs/development/hardware-integration/shift-registers)  
 [Pinout, SPI, I²C and Pin control file (For Seeed XIAO, nRF52840)](https://zmk.dev/docs/development/hardware-integration/pinctrl?interconnect=seeed_xiao&controller-type=nrf52840#boards-shields-and-modules) (Basically read it for the pinout of XIAO in the 74595 developing stage)  
-Community Searching:
+Community Searching:  
 Googled [ZMK Shift register](https://www.google.com/search?q=ZMK+Shift+register) and found [this community .overlay and repo refrence](https://github.com/petejohanson/revxlp-config/blob/main/config/boards/shields/revxlp/revxlp.overlay#L12) from [this PR comment in zmk repo](https://github.com/zmkfirmware/zmk/pull/1325#issuecomment-1145555954) saw from [this one](https://github.com/zmkfirmware/zmk/issues/927#issuecomment-1166185627)
 
 ## To be use
