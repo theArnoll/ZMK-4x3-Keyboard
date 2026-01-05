@@ -7,36 +7,32 @@
 };
 
 / {
+    macros {  // https://v0-3-branch.zmk.dev/docs/keymaps/behaviors/macros
+        zed_em_kay: zed_em_kay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT> ;
+        };
+
+        test_macro: test_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp L &kp A &kp Y &kp E &kp R
+                                &kp S &kp W &kp I &kp T &kp C &kp H> ;
+        };
+
+        swLyr: swLyr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &to 1 &kp N0> ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        macros {  // https://v0-3-branch.zmk.dev/docs/keymaps/behaviors/macros
-            zed_em_kay: zed_em_kay {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_press &kp LSHFT>
-                    , <&macro_tap &kp Z &kp M &kp K>
-                    , <&macro_release &kp LSHFT> ;
-            };
-        };
-
-        macros {
-            test_macro: test_macro {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp L &kp A &kp Y &kp E &kp R
-                                    &kp S &kp W &kp I &kp T &kp C &kp H> ;
-            };
-        };
-        };
-
-        macros {
-            swLyr: swLyr {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &to 1 &kp N1> ;
-            };
-        };
 
         default_layer { // Layer 0
             // -------------------------------------
@@ -70,7 +66,7 @@
             >;
         };
 
-        user_define_layer { // Layer 3
+        user_define_layer1 { // Layer 3
             bindings = <
                 &kp B &kp A &kp C
                 &kp K &kp U &kp P
@@ -78,9 +74,8 @@
                 &kp R &to 0 &to 6
             >;
         };
-        };
 
-        user_define_layer { // Layer 4
+        user_define_layer2 { // Layer 4
             bindings = <
                 &kp B &kp A &kp C
                 &kp K &kp U &kp P
@@ -88,9 +83,8 @@
                 &kp R &to 0 &to 6
             >;
         };
-        };
 
-        user_define_layer { // Layer 5
+        user_define_layer3 { // Layer 5
             bindings = <
                 &kp B &kp A &kp C
                 &kp K &kp U &kp P
