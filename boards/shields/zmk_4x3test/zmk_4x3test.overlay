@@ -1,5 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
-#include "zmk_4x3test-layouts.dtsi"
+// #include "zmk_4x3test-layouts.dtsi"
+#include <physical_layouts.dtsi>
 
 /* 
 https://wiki.seeedstudio.com/XIAO-nRF52840-Zephyr-RTOS/#onboard-led
@@ -29,6 +30,9 @@ https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/boardsource3x4/b
 https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jpg
 */
 
+&xiao_serial { status = "disabled"; };
+    // https://github.com/petejohanson/revxlp-config/blob/main/config/boards/shields/revxlp/revxlp.overlay#L10
+
 &xiao_spi {
     status = "okay";
     cs-gpios = <&xiao_d 9 GPIO_ACTIVE_LOW>;
@@ -44,8 +48,81 @@ https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jp
 };
 
 / {
-    
-    // kscan to dtsi
+    chosen {
+		zmk,physical-layout = &physical_layout0;
+		zmk,kscan = &kscan0;
+	};
+
+    default_transform: keymap_transform0 { 
+        compatible = "zmk,matrix-transform";
+        columns = <3>; // Length of the "col-gpios" array
+        rows = <4>; // Length of the "row-gpios" array
+        map = <
+            RC(0,0) RC(0,1) RC(0,2)
+            RC(1,0) RC(1,1) RC(1,2)
+            RC(2,0) RC(2,1) RC(2,2)
+            RC(3,0) RC(3,1) RC(3,2)
+        >;
+    };
+
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+        
+        col-gpios
+            = <&shifter 0 GPIO_ACTIVE_HIGH>
+            , <&shifter 1 GPIO_ACTIVE_HIGH>
+            , <&shifter 2 GPIO_ACTIVE_HIGH>
+            // = <&xiao_d 8 (GPIO_ACTIVE_HIGH) >// | GPIO_PULL_UP)>
+            // , <&xiao_d 9 (GPIO_ACTIVE_HIGH) >// | GPIO_PULL_UP)>
+            // , <&xiao_d 10 (GPIO_ACTIVE_HIGH) >// | GPIO_PULL_UP)> //todo: make it 74595
+            ;
+
+        row-gpios
+            = <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+    };
+
+    // from .dtsi
+    physical_layout0: physical_layout0 { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#multiple-physical-layouts/
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+        kscan = <&kscan0>;
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0    0       0     0     0>
+            , <&key_physical_attrs 100 100  100    0       0     0     0>
+            , <&key_physical_attrs 100 100  200    0       0     0     0>
+            , <&key_physical_attrs 100 100    0  100       0     0     0>
+            , <&key_physical_attrs 100 100  100  100       0     0     0>
+            , <&key_physical_attrs 100 100  200  100       0     0     0>
+            , <&key_physical_attrs 100 100    0  200       0     0     0>
+            , <&key_physical_attrs 100 100  100  200       0     0     0>
+            , <&key_physical_attrs 100 100  200  200       0     0     0>
+            , <&key_physical_attrs 100 100    0  300       0     0     0>
+            , <&key_physical_attrs 100 100  100  300       0     0     0>
+            , <&key_physical_attrs 100 100  200  300       0     0     0>
+            ;
+            // https://zmk.dev/docs/development/hardware-integration/physical-layouts#physical-layout-with-keys-example
+            // https://zmk.dev/docs/features/studio#adding-zmk-studio-support-to-a-keyboard
+        };
+
+    // from .dtsi
+    position_map { // https://zmk.dev/docs/development/hardware-integration/physical-layouts#writing-a-position-map
+        compatible = "zmk,physical-layout-position-map";
+        complete; // Optional, see 'Example non-complete position map'
+        layout1: layout1 {
+            physical-layout = <&physical_layout0>;
+            positions = < 0  1  2 >,
+                        < 3  4  5 >,
+                        < 6  7  8 >,
+                        < 9 10 11 >; // List of positions to map
+        };
+    };
     
     // the following is commented for https://zmk.dev/docs/features/studio#adding-zmk-studio-support-to-a-keyboard
     

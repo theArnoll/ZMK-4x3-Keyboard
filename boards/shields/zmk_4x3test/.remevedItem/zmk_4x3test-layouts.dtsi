@@ -1,0 +1,13 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    // chosen {
+    //     zmk,kscan = &kscan0;
+    //     zmk,physical-layout = &physical_layout0;
+    //     // Other chosen items
+    // };
+
+    // transorm to .overlay
+
+    // phical_layout and position map to .overlay
+};

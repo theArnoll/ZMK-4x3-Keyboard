@@ -1,0 +1,1 @@
+removed bec saw [it](https://github.com/petejohanson/revxlp-config/blob/main/config/boards/shields/revxlp/revxlp.overlay#L12)
