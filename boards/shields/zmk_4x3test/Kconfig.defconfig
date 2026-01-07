@@ -13,9 +13,9 @@ config ZMK_HID_REPORT_TYPE_NKRO
 #    bool
 #    default y
 
-config BT
-    bool
-    default y
+# config BT
+#     bool
+#     default y
 
 config ZMK_BLE
     bool
