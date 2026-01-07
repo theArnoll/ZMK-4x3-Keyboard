@@ -26,7 +26,7 @@ Build 了 50 次，終於迎來了第一次成功。
 - 支援 ZMK Studio
 
 ### 待加入功能
-- 藍牙連接（使用 USB 供電）
+- 藍牙連接（以 BL-5C 電池供電）
 
 ## 硬體需求
 
@@ -35,7 +35,7 @@ Build 了 50 次，終於迎來了第一次成功。
 - Seeed XIAO nRF52840
 - 16 顆機械鍵盤軸體
 - 我的 4×3 矩陣 DIP PCB  
-  未來可以在台灣的購物平台「蝦皮 (Shopee)」購買，PCB 製造文件隨後也會上傳。
+  未來可以在台灣的購物平台「蝦皮」購買，PCB 製造文件隨後也會上傳。
 - 74HC595 IC
 
 ### 未來更新所需的組件
@@ -52,13 +52,13 @@ Build 了 50 次，終於迎來了第一次成功。
 
 ---
 
-# History
+# 專案歷程
 
 由新到舊排序
 
-## FUNCTION COMPLETED
+### FUNCTION COMPLETED
 
-在 **第 117 次 build** (2026 年 1 月 5 日 → 6 日凌晨) 有線功能完成!  
+在 **第 117 次 build** (2026 年 1 月 5 日 → 6 日半夜) 有線功能完成!  
 結果真正的問題在於，我不應該在使用 SPI 時將 MISO (D9) 設定為 `CS` (AKA `latch`) 腳位。  
 **各位請記取教訓！** 否則你會浪費大量的時間。
 
@@ -66,12 +66,13 @@ Build 了 50 次，終於迎來了第一次成功。
 還需要更多配置才能讓它正常運作，但它已經通過編譯且基本上可以執行。  
 一切終於快要告一個段落了……
 
-## ZMK Studio function added successfully
+### ZMK Studio function added successfully
 
 在 **第 85 次 build** (2025 年 12 月 26 日)，我終於成功加入了 ZMK Studio。  
 好喔，所以所有的問題都出在 [.dtsi](./boards/shields/zmk_4x3test/zmk_4x3test-layouts.dtsi) 文件中的 `chosen` 節點。它真的是「被選中的節點」。
 
-## 釐清直欄 (Column) 與橫列 (Row)
+### 釐清直欄 (Column) 與橫列 (Row)
+
 在 **第 66 次 build** (2025 年 11 月 11 日)，我終於發現我誤解了 Column 和 Row 的意思。  
 作為一個小提醒，我在這裡做個筆記：
 
@@ -80,7 +81,7 @@ Build 了 50 次，終於迎來了第一次成功。
 第 0 列 (Row 0)|RC(0,0)|RC(0,1)|RC(0,2)
 第 1 列 (Row 1)|RC(1,0)|RC(1,1)|RC(1,2)
 
-## First successful build
+### First successful build
 
 終於在 **第 51 次 build** 成功編譯，並在 **第 54 次** 時才意識到這件事。  
 之所以沒在成功當下發現，是因為我當時是用 Samsung Galaxy Tab S7 FE 搭配 [VS code 網頁版](https://vscode.dev)，非常卡頓，很難獲得即時的進度回饋。

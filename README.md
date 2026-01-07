@@ -54,9 +54,9 @@ The order of references in the file should be in chronological order of use.
 
 Latest first
 
-## FUNCTION COMPLETED
+### FUNCTION COMPLETED
 
-On **117th build**(2026 Jan. 5→6 Midnight) WIRED FUNCTION COMPLETED!  
+On **117th build**(2026 Jan. 5 → 6 Midnight) WIRED FUNCTION COMPLETED!  
 Turns out the real problem is I shouldn't make MISO (D9) a `CS` (AKA `latch`) pin while using SPI.  
 **REMEMBER EVERYONE!** or you'll waste a whole lot of time.
 
@@ -64,12 +64,13 @@ On **107th build**(2026 Jan. 5) I finally make 74595-added version passed buildi
 Need to be configure more to make it able to function normally, but it passed and basically runnable.  
 Everything's finally going to reach a stage of an end…
 
-## ZMK Studio function added successfully
+### ZMK Studio function added successfully
 
 On **85th build**(2025 Dec. 26) I finally added ZMK Studio successfully  
 Okay, so every problem is from the `chosen` node in the [.dtsi](./boards/shields/zmk_4x3test/zmk_4x3test-layouts.dtsi) file. It's really "the chosen node"
 
-## Clarified Column and Row
+### Clarified Column and Row
+
 On **66th build**(2025 Nov. 11) I finally found that I misunderstand the meaning of column and row.  
 As a little note, I'm going to make a note here
 
@@ -78,7 +79,7 @@ As a little note, I'm going to make a note here
 Row 0|RC(0,0)|RC(0,1)|RC(0,2)
 Row 1|RC(1,0)|RC(1,1)|RC(1,2)
 
-## First successful build
+### First successful build
 
 Finally built successfully built on **51th build**, and realized it on **54th build**.  
 The reason I'm not realized right when succeeded is that I was using my Samsung Galaxy Tab S7 FE + [VS code web version](https://vscode.dev), and it was laggy, so it's hard to see the progress with a very real-time experience.
