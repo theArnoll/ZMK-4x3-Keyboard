@@ -39,7 +39,7 @@ Googled [ZMK Shift register](https://www.google.com/search?q=ZMK+Shift+register)
 ### Bluetooth
 
 For Kconfig.defconfig: [CONFIG_BT and CONFIG_USB](https://v0-3-branch.zmk.dev/docs/config/system#bluetooth)  
-(Toggle between USB transfer and Bluetooth transfer](https://v0-3-branch.zmk.dev/docs/keymaps/behaviors/outputs#output-command-defines)
+[Toggle between USB transfer and Bluetooth transfer](https://v0-3-branch.zmk.dev/docs/keymaps/behaviors/outputs#output-command-defines)
 
 ## To be use
 
