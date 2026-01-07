@@ -10,18 +10,23 @@ config ZMK_KEYBOARD_NAME
 # https://github.com/petejohanson/revxlp-config/blob/main/config/boards/shields/revxlp/Kconfig.defconfig
 
 config ZMK_HID_REPORT_TYPE_NKRO
+    bool
     default y
 
 config BT
+    bool
     default y
 
 config ZMK_BLE
+    bool
     default y
 
 config USB
+    bool
     default y
 
 config ZMK_USB
+    bool
     default y
 
 
