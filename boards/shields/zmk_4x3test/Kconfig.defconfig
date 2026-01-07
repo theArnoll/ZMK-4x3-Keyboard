@@ -21,13 +21,13 @@ config ZMK_BLE
     bool
     default y
 
-# config USB
-#     bool
-#     default y
+config USB
+    bool
+    default n
 
-# config ZMK_USB
-#     bool
-#     default y
+config ZMK_USB
+    bool
+    default n
 
 
 #CONFIG_ZMK_HID_REPORT_TYPE_NKRO=y
