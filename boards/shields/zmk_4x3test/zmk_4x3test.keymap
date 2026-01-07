@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/outputs.h> // for OUT_TOG
 
 &kscan0 {
-    debounce-press-ms = <5>;
-    debounce-release-ms = <5>;
+    debounce-press-ms = <3>;
+    debounce-release-ms = <3>;
 };
 
 / {
@@ -72,7 +72,7 @@
             bindings = <
                 &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2
                 &bt BT_SEL 3   &bt BT_SEL 4 &bt BT_CLR 
-                &bt BT_CLR_ALL &out OUT_TOG &bt BT_NXT
+                &bt BT_CLR_ALL &out OUT_BLE &bt OUT_USB
                 &to 1          &to 0        &to 6
             >;
         };

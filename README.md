@@ -22,6 +22,8 @@ Drag the `.uf2` file into the "USB". After the file transfer is done, Seeed XIAO
 - USB Wired connect
 - Simple typing
 - ZMK Studio support
+- Multi layer (with two additional layers for user to define via ZMK Studio)
+- NKRO support
 
 ### Functions to be add
 - Bluetooth connection (With BL-5C battery)
@@ -43,6 +45,26 @@ Drag the `.uf2` file into the "USB". After the file transfer is done, Seeed XIAO
 - (Optional) LED bar graph display
 - (Optional) 4 Resistors for ↑
 
+## Wireing
+
+```
+        XIAO D2 → Row 1
+        XIAO D3 → Row 2
+        XIAO D4 → Row 3
+        XIAO D5 → Row 4
+
+      74595 Vcc → XIAO 3V3
+      74595 GND → XIAO GND
+      74595 OE' → 74595/XIAO GND
+   74595 SRCLR' → 74595 Vcc / XIAO 3V3
+        XIAO D7 → 74595 RCLK
+  XIAO SCK = D8 → 74595 SRCLK
+XIAO MOSI = D10 → 74595 SER
+       74595 QA → Column 1
+       74595 QB → Column 2
+       74595 QC → Column 3
+```
+
 ---
 
 Everything here are basically all referenced to the official document. You can check out [references.md](./references.md) for more detailed information.\
@@ -53,6 +75,10 @@ The order of references in the file should be in chronological order of use.
 # History
 
 Latest first
+
+<!-- ### BLUETOOTH SUPPORT COMPLETED -->
+
+<!-- On **129th build**(2026 Jan. 7) Bluetooth connection support added succesfully -->
 
 ### FUNCTION COMPLETED
 
