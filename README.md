@@ -108,4 +108,4 @@ Row 1|RC(1,0)|RC(1,1)|RC(1,2)
 ### First successful build
 
 Finally built successfully built on **51th build**, and realized it on **54th build**.  
-The reason I'm not realized right when succeeded is that I was using my Samsung Galaxy Tab S7 FE + [VS code web version](https://vscode.dev), and it was laggy, so it's hard to see the progress with a very real-time experience.
+The reason I'm not realized right when succeeded is that I was using my Samsung Galaxy Tab S7 FE + [VS code web version](https://vscode.dev) in the last few attempt, and the tablet is laggy, so it's hard to see the progress with a very real-time experience.
