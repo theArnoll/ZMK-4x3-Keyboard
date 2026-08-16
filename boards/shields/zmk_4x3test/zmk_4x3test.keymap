@@ -102,56 +102,56 @@
         combo_ae_win {
             timeout-ms = <50>;
             key-positions = <0 3>; // 請替換為你 A 和 E 實際的 ID
-            bindings = <&mac_ae_win>;
+            bindings = <&ae_win>;
             layers = <4>;
         };
 
         combo_oe_win {
             timeout-ms = <50>;
             key-positions = <1 3>; // 請替換為你 O 和 E 實際的 ID
-            bindings = <&mac_oe_win>;
+            bindings = <&oe_win>;
             layers = <4>;
         };
 
         combo_ue_win {
             timeout-ms = <50>;
             key-positions = <2 3>; // 請替換為你 U 和 E 實際的 ID
-            bindings = <&mac_ue_win>;
+            bindings = <&ue_win>;
             layers = <4>;
         };
 
         combo_ss_win {
             timeout-ms = <50>;
             key-positions = <3 5>; // 請替換為你 S 和 E 實際的 ID (或是你想用的組合)
-            bindings = <&mac_ss_win>;
+            bindings = <&ss_win>;
             layers = <4>;
         };
         
         combo_ae_mac {
             timeout-ms = <50>;
             key-positions = <0 3>; // 與 Windows 層保持對應的位置 ID
-            bindings = <&mac_ae_mac>;
+            bindings = <&ae_mac>;
             layers = <5>;
         };
 
         combo_oe_mac {
             timeout-ms = <50>;
             key-positions = <1 3>; // 與 Windows 層保持對應的位置 ID
-            bindings = <&mac_oe_mac>;
+            bindings = <&oe_mac>;
             layers = <5>;
         };
 
         combo_ue_mac {
             timeout-ms = <50>;
             key-positions = <2 3>; // 與 Windows 層保持對應的位置 ID
-            bindings = <&mac_ue_mac>;
+            bindings = <&ue_mac>;
             layers = <5>;
         };
 
         combo_ss_mac {
             timeout-ms = <50>;
             key-positions = <3 5>; // 與 Windows 層保持對應的位置 ID
-            bindings = <&mac_ss_mac>;
+            bindings = <&ss_mac>;
             layers = <5>;
         };
     };
