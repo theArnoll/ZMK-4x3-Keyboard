@@ -28,7 +28,131 @@
         swLyr: swLyr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &to 1 &kp N0> ;
+            bindings = <&macro_tap &to 1 &kp LOCKING_NUM> ;
+        };
+
+        // Ä (Alt + 0228)
+        ae_win: ae_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // wait-ms = <10>; tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>, <&macro_release &kp LALT>;
+        };
+
+        // Ö (Alt + 0246)
+        oe_win: oe_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // wait-ms = <10>; tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>, <&macro_release &kp LALT>;
+        };
+
+        // Ü (Alt + 0252)
+        ue_win: ue_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // wait-ms = <10>; tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>, <&macro_release &kp LALT>;
+        };
+
+        // ß (Alt + 0223)
+        ss_win: ss_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // wait-ms = <10>; tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3>, <&macro_release &kp LALT>;
+        };
+        
+        // Ä (Option + U, 然後 A)
+        ae_mac: ae_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // wait-ms = <30>; tap-ms = <30>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_tap &kp A>;
+        };
+
+        // Ö (Option + U, 然後 O)
+        oe_mac: oe_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // wait-ms = <30>; tap-ms = <30>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_tap &kp O>;
+        };
+
+        // Ü (Option + U, 然後 U)
+        ue_mac: ue_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // wait-ms = <30>; tap-ms = <30>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_tap &kp U>;
+        };
+
+        // ß (Option + S)
+        ss_mac: ss_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // wait-ms = <30>; tap-ms = <30>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp S>, <&macro_release &kp LALT>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_ae_win {
+            timeout-ms = <50>;
+            key-positions = <0 3>; // 請替換為你 A 和 E 實際的 ID
+            bindings = <&mac_ae_win>;
+            layers = <4>;
+        };
+
+        combo_oe_win {
+            timeout-ms = <50>;
+            key-positions = <1 3>; // 請替換為你 O 和 E 實際的 ID
+            bindings = <&mac_oe_win>;
+            layers = <4>;
+        };
+
+        combo_ue_win {
+            timeout-ms = <50>;
+            key-positions = <2 3>; // 請替換為你 U 和 E 實際的 ID
+            bindings = <&mac_ue_win>;
+            layers = <4>;
+        };
+
+        combo_ss_win {
+            timeout-ms = <50>;
+            key-positions = <3 5>; // 請替換為你 S 和 E 實際的 ID (或是你想用的組合)
+            bindings = <&mac_ss_win>;
+            layers = <4>;
+        };
+        
+        combo_ae_mac {
+            timeout-ms = <50>;
+            key-positions = <0 3>; // 與 Windows 層保持對應的位置 ID
+            bindings = <&mac_ae_mac>;
+            layers = <5>;
+        };
+
+        combo_oe_mac {
+            timeout-ms = <50>;
+            key-positions = <1 3>; // 與 Windows 層保持對應的位置 ID
+            bindings = <&mac_oe_mac>;
+            layers = <5>;
+        };
+
+        combo_ue_mac {
+            timeout-ms = <50>;
+            key-positions = <2 3>; // 與 Windows 層保持對應的位置 ID
+            bindings = <&mac_ue_mac>;
+            layers = <5>;
+        };
+
+        combo_ss_mac {
+            timeout-ms = <50>;
+            key-positions = <3 5>; // 與 Windows 層保持對應的位置 ID
+            bindings = <&mac_ss_mac>;
+            layers = <5>;
         };
     };
 
@@ -77,20 +201,20 @@
             >;
         };
 
-        user_define_layer1 { // Layer 4
+        user_define_layer1 { // Layer 4, äöüß test, Windows, Dvorak
             bindings = <
-                &kp B &kp A &kp C
-                &kp K &kp U &kp P
-                &kp L &kp A &kp Y
+                &kp A &kp S &kp F
+                &kp D &kp D &kp SEMICOLON
+                &kp COMMA &kp G &kp L
                 &kp R &to 0 &to 6
             >;
         };
 
-        user_define_layer2 { // Layer 5
+        user_define_layer2 { // Layer 5, äöüß test, Windows, Dvorak
             bindings = <
-                &kp B &kp A &kp C
-                &kp K &kp U &kp P
-                &kp L &kp A &kp Y
+                &kp A &kp S &kp F
+                &kp D &kp D &kp SEMICOLON
+                &kp M &kp A &kp I
                 &kp R &to 0 &to 6
             >;
         };

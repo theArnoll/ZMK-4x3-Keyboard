@@ -15,9 +15,5 @@ manifest:
   #     url-base: https://github.com/theArnoll
   #   # Additional modules containing boards/shields/custom code can be listed here as well
   #   # See https://docs.zephyrproject.org/3.2.0/develop/west/manife  st.html#projects
-  # projects:
-  #   - name: zmk_4x3test
-  #     remote: zmk_4x3test
-  #     import: app/west.yml
   self:
     path: config
