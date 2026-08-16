@@ -6,11 +6,10 @@ Before start building the final Dvorak-optimized ortholinear southpole keyboard,
 
 Built 50 times and finally have the first success building
 
-## The bluetooth wireless function is still under development
-
 ## How to burn the firmware into your Seeed XIAO
 
-First, you need the `.uf2` file of this project. The `.uf2` file is in `Action` tab. Go to the tab and click the first one in the list. In `Artifacts` section, there's a `firmware` object. Click the download icon on the right to download the `.zip`, unzip it and you'll have the `.uf2`.
+First, you need the `.uf2` file of this project. The `.uf2` file is in `Action` tab. Go to the tab and click the first one in the list. In `Artifacts` section, there's a `firmware` object. Click the download icon on the right to download the `.zip`, unzip it and you'll have the `.uf2`.  
+Or you can just click (this link)[https://arnollstudio.pse.is/ZMK_4x3_Keyboard]
 
 After that, turn Seeed XIAO into bootloader mode by double tapping the `RST` button on the board **after** the board is connected to PC. Your Seeed XIAO will appear in File Explorer like an USB called `XIAO-SENSE`. If it doesn't come with that name, at least you'll able to recognize the device.
 
@@ -24,9 +23,11 @@ Drag the `.uf2` file into the "USB". After the file transfer is done, Seeed XIAO
 - ZMK Studio support
 - Multi layer (with two additional layers for user to define via ZMK Studio)
 - NKRO support
+- Bluetooth connection (With BL-5C battery)
 
 ### Functions to be add
-- Bluetooth connection (With BL-5C battery)
+
+- LED Indicator
 
 ## Hardware requirement
 
